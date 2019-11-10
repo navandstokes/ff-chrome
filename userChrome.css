@@ -1,0 +1,416 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+  /* COLORS */
+
+  /** DESCRIPTION : set the colors used **/
+  :root {
+    --focus-bg: #000 !important;
+    --nav-bg: #2b2b2b !important;
+    --tab-bg: #222225 !important;
+    --tool-bg: #242425 !important;
+    --url-bg: #121212 !important;
+    --tab-bg-select: #121212 !important;
+    --border-color: #242425 !important;
+    --primary-color: #ffffff !important;
+    --invert: invert(1) !important;
+  }
+
+  /* GENERAL */
+
+  /** DESCRIPTION : set the main font and others details **/
+  * {
+    font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
+  }
+
+  *::-moz-focus-inner {
+    border: 0;
+  }
+
+  html {
+    overflow: auto;
+  }
+
+  #main-window:not([chromehidden*="toolbar"])[sizemode="normal"] {
+    margin-top: 0px !important;
+    margin-right: -2px !important;
+    margin-left: -1px !important;
+  }
+
+/*  #downloads-indicator-anchor,
+  .toolbarbutton-1 > .toolbarbutton-icon, 
+  .toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+        filter: brightness(1) var(--invert) !important;
+  }*/
+
+  #PersonalToolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover, 
+  .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled="true"]):hover, 
+  .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled="true"]):hover, 
+  .findbar-button:not(:-moz-any([checked="true"], [disabled="true"])):hover > .toolbarbutton-text, 
+  toolbarbutton.bookmark-item:not(.subviewbutton):hover:not([disabled="true"]):not([open]), 
+  toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon, 
+  toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-text, 
+  toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-stack {
+    background-color: transparent !important;
+  }
+
+/*  .autocomplete-history-dropmarker.urlbar-history-dropmarker,
+  #identity-box,
+  #page-action-buttons,
+  .panel-arrow,
+  #PanelUI-menu-button,
+  .search-one-offs,
+  #sidebar-header,
+  #stop-reload-button,
+  .tabs-newtab-button,
+  #TabsToolbar .tabbrowser-tab:after,
+  #TabsToolbar .tabbrowser-tab:before,
+  #titlebar-min,
+  #titlebar-max,
+  .titlebar-placeholder[type="pre-tabs"] {
+    display: none !important;
+  }*/
+
+  /* POPUP */
+
+  /** DESCRIPTION : change the elements of the popup dialog **/
+  /*[class^=PanelUI-],
+  #downloadsFooterButtons,
+  #downloadsListBox,
+  #emptyDownloads,
+  .panel-subview-body,
+  .panel-subview-footer,
+  menupopup,
+  menupopup > menu > menupopup,
+  popup,
+  popup > menu > menupopup {
+    -moz-appearance: none !important;
+    background: var(--nav-bg) !important;
+    border: none !important;
+  }
+
+  menupopup,
+  menupopup > menu > menupopup,
+  popup,
+  popup > menu > menupopup {
+    padding: 10px !important;
+  }
+
+  menuitem,
+  menupopup menu {
+    -moz-appearance: none !important;
+    color: var(--primary-color)!important
+  }
+
+  menupopup menuseparator {
+    -moz-appearance: none !important;
+    background: rgba(0, 0, 0, 0) !important;
+    border: 0 !important;
+  }
+
+  #context-navigation menuitem,
+  .panel-arrowcontent {
+    background-color: var(--nav-bg) !important;
+    color: var(--primary-color) !important;
+    padding-bottom: 10px !important;
+  }
+
+  #context-navigation,
+  #context-sep-navigation {
+    padding: 0 !important;
+  }*/
+
+  /* TOOLBAR */
+
+  /** DESCRIPTION : change the elements in the toolbar **/
+ /* #navigator-toolbox {
+    background: var(--nav-bg) !important;
+  }
+
+  #navigator-toolbox > toolbar {
+    box-shadow: none !important;
+  }
+
+  #navigator-toolbox toolbar #menubar-items {
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+      margin-left: 10px !important;
+  }
+
+  #navigator-toolbox toolbar #menubar-items * {
+    color: var(--primary-color);
+    font-size: 10pt !important;
+  }*/
+
+  /* PERSONAL TOOLBAR */
+
+  /** DESCRIPTION : change the elements of the personal toolbar **/
+/*  #PersonalToolbar {
+      height: 40px !important;
+      padding-top: 2px !important;  
+  }
+*/
+  /* TABBAR */
+
+ /* #titlebar-close {
+    list-style-image: url("https://i.imgur.com/qzZ5RJH.png") !important;
+  }
+
+  #titlebar-close:hover {
+    background-color: transparent !important;
+    opacity: .5 !important;
+  }
+
+  .titlebar-button > .toolbarbutton-icon {
+    width: 15px !important;
+    height: 15px !important;
+  }*/
+
+  /* NAVBAR */
+
+  /** DESCRIPTION : change the elements of the navbar **/
+  #nav-bar {
+    border-bottom: 1px solid var(--border-color) !important;
+    margin-bottom: -1px !important;
+  }
+
+  #nav-bar {
+      margin-top: var(--navbar-margin-top);
+      margin-right: var(--navbar-margin-right);
+      box-shadow: none !important;
+  }
+  
+  #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+    background: var(--nav-bg) !important;
+    border-color: transparent !important;
+  }
+
+  #nav-bar #back-button > .toolbarbutton-icon {
+    display: none;
+    background: url("http://i.imgur.com/tONrOjq.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px auto !important;
+    background-position: center center !important;
+    border: none !important;
+    height: 0px;
+    width: 0px;
+    padding: 30px 0px 0px 15px !important;
+    margin-top: 0px !important;
+  }
+
+  #nav-bar #back-button#back-button#back-button>image.toolbarbutton-icon {
+    box-shadow: none !important;
+  }
+
+  #nav-bar #back-button {
+    list-style-image: none !important;
+  }
+
+  #nav-bar #forward-button {
+    display: none;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsSAAALEgHS3X78AAABZUlEQVR42u3bMVLCQBSA4Ue0sEydgktQegmPYI7ASTyC3sTKkhmv4FjQcgKxgRlGpXXf23xflyqBn02yIRsBAAAAAAAAAAAAAMAvq8oHf7/ZPEbE02lz+7bbvVQPclP54NfT9BoRY0TcRcTDepo+Pvf798qfaSj+gxp/bD+fRo0giZSO0mOQ0lF6DVI2Ss9BSkbpLcixepTegqyqj5TeT1nlojSbqV/Mssd/3vWceUbfcoS0iJF+pLQMMjbcd9ooS7qGlIhSJcjxyi1td1GWPEJSRhEkWRRBkkURJFmUpQdJ9+zLCIn4ujJpFaSBdC95OGX9/R1sBckzQpo+fHQNSRRDkGQxBEkWQ5BkMSIibhd+e5ru38PByDAPOTuIkSvItlGU1C85VF8fcuwpxtKuIXOFBT2DGIKIseAgc7V1h4MYgoixsCBz5eXR1YMceorRQ5DzbP/QQwwAAAAAAAAAAAAAAK74BlzmezLjAmTAAAAAAElFTkSuQmCC") !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px auto !important;
+    background-position: center center !important;
+    border: none !important;
+    width: 0px;
+    height: 0px;
+    padding: 30px 0px 0px 15px !important;
+    margin-top: 0px !important;
+    margin-right: 0px;
+    margin-left: -10px !important;
+    filter: brightness(0) var(--invert) !important;
+  }
+
+  #searchbar > .searchbar-textbox,
+  #urlbar {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      color: var(--primary-color) !important;
+  }
+
+  .urlbar-textbox-container {
+      margin-top: -1px !important;
+      margin-left: 5px !important;
+      text-align: center;
+  }
+
+  /* align bar text */ 
+  #urlbar .urlbar-input-box {
+      text-align: center !important; 
+  }
+
+  #PopupAutoCompleteRichResult {
+    border: none !important;
+    margin-top: -1px !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    margin-right: -1px !important;;
+    max-width: 100vw !important;
+  }
+
+  #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+    background: var(--nav-bg) !important;
+    color: var(--primary-color) !important;
+    box-shadow: none !important;
+  }
+
+  #PopupAutoCompleteRichResult .autocomplete-richlistbox * {
+    font-size: 10pt !important;
+  }
+
+  #nav-bar-overflow-button {
+      margin-right: 5px !important;
+  }
+
+  :root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button {
+    border-color: transparent !important;
+    border-image: none !important;
+  }
+
+  :root:not([uidensity="compact"]):not([chromehidden~="toolbar"]) #PanelUI-button #PanelUI-menu-button {
+    filter: brigthness(1) var(--invert) !important;
+  } 
+
+  /* CUSTOMIZATION */
+
+  /** DESCRIPTION : change the elements of the customization page **/
+/*  #customization-container {
+    background: var(--tool-bg) !important;
+    color: var(--primary-color) !important;
+  }
+
+  .customizationmode-button {
+    background: var(--tab-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--primary-color) !important;
+  }*/
+
+
+/*Additional Code ------ Added from https://github.com/Timvde/UserChrome-Tweaks */
+/*For Tree Style Tabs*/
+
+/* ##### TABS TOOLBAR ##################################### */
+
+/* Hide main tabs toolbar */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+#TabsToolbar {
+    visibility: collapse !important;
+    padding-inline-start: 40px !important;
+}
+
+#TabsToolbar > .toolbar-items,
+#TabsToolbar > .titlebar-spacer{ visibility: hidden }
+#nav-bar{ margin-top: -33px; }
+
+
+/* ##### SIDEBAR ########################################## */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#sidebar-box[sidebarcommand^="containertabs"] #sidebar-header {
+  display: none;
+}
+
+/* Sidebar min and max width removal */
+#sidebar {
+  max-width: none !important;
+  min-width: 0px !important;
+}
+
+/* Remove below if not using TreeStyleTab extension */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter,
+#sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"] + #sidebar-splitter {
+  display: none !important;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header,
+#sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"] + #sidebar-splitter {
+  visibility: collapse;
+}
+
+:root {
+  --thin-tab-width: 30px;
+  --wide-tab-width: 200px;
+}
+#sidebar-box {
+  min-width: var(--wide-tab-width) !important;
+  max-width: none !important;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"],
+#sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"] {
+  overflow: hidden !important;
+  position: relative !important;
+  /*transition: all 100ms !important;*/
+  min-width: var(--thin-tab-width) !important;
+  max-width: var(--thin-tab-width) !important;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"]:hover {
+  transition: all 100ms !important;
+  min-width: var(--wide-tab-width) !important;
+  max-width: var(--wide-tab-width) !important;
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
+}
+
+#back-button,#forward-button {
+    display: none;
+}
+
+@-moz-document url(moz-extension://3c9765b9-578d-4087-b815-6214eb63bd33/sidebar/sidebar.html) {
+    #pinned-tabs {
+        display: none;
+    }
+    .container-tab-close {
+        display: none;
+    }
+    .container-header .container-icon {
+        width:24px;
+        height:24px;
+        padding: 5px 5px 5px 2px;
+        filter: grayscale(1) invert(1);
+    }
+    .container-title {
+        white-space: nowrap;
+    }
+}
+
+/* Context Menus */
+#context-navigation, #context-sep-navigation {
+  display: none !important;
+}
+
+#context-savepage, #context-pocket, #context-sep-sendpagetodevice, #context-sendpagetodevice, #context-viewbgimage, #context-selectall, #context-sep-viewsource, #context-sep-viewbgimage {
+  display: none !important;
+}
+
+#context-openlink, #context-openlinkprivate {
+  display: none !important;
+}
+
+#context-bookmarklink, #context-savelink, #context-savelinktopocket, #context-copy, #context-sep-selectall {
+  display: none !important;
+}
+
+#context-sendlinktodevice, #context-viewpartialsource-selection, #context-sep-sendlinktodevice {
+  display: none !important;
+}
+
+#ublokcU_raymondhill_net-menuitem-_uBlock0-blockElement, #screenshots_mozilla_org_create-screenshot {
+  display: none !important;
+}
+
+#context-sendimage, #context-setDesktopBackground {
+  display: none !important;
+}
+
+#context_sendTabToDevice, #context_closeTabsToTheEnd, #context_closeOTherTabs, #context_reloadAllTab {
+  display: none !important;
+}

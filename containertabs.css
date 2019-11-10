@@ -1,0 +1,74 @@
+@-moz-document url(chrome://browser/content/browser.xul) { /* Hide main tabs toolbar */
+    #main-window[sizemode="maximized"] #titlebar, #TabsToolbar .toolbar-items, #TabsToolbar .titlebar-spacer {
+        visibility: collapse;
+    }
+    .titlebar-buttonbox-container {
+        position: absolute;
+        right: 0;
+    }
+    /* Sidebar min and max width removal */
+    #sidebar {
+        max-width: none !important;
+        min-width: 0px !important;
+    }
+    /* Hide splitter, when using Tree Style Tab. */
+    #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter,
+    #sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"] + #sidebar-splitter {
+        display: none !important;
+    }
+    /* Hide sidebar header, when using Tree Style Tab. */
+    #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header,
+    #sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"] #sidebar-header {
+        visibility: collapse;
+    }
+    /* Shrink sidebar until hovered, when using Tree Style Tab. */
+    :root {
+        --thin-tab-width: 30px;
+        --wide-tab-width: 200px;
+    }
+    #sidebar-box {
+        min-width: var(--wide-tab-width) !important;
+        max-width: none !important;
+    }
+    #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"],
+    #sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"]{
+        position: relative !important;
+        transition: all 300ms !important;
+        min-width: var(--thin-tab-width) !important;
+        max-width: var(--thin-tab-width) !important;
+    }
+    #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+    #sidebar-box[sidebarcommand="containertabssidebar_maciekmm_net-sidebar-action"]:hover{
+        transition: all 300ms !important;
+        min-width: var(--wide-tab-width) !important;
+        max-width: var(--wide-tab-width) !important; /* Negative right-margin to keep page from being pushed to the side. */
+        margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
+    }
+    #nav-bar {
+        margin-top: 5px;
+    }
+    #titlebar {
+        -moz-appearance: none !important;
+        height: 10px !important;
+    }
+    #back-button,#forward-button {
+        display: none;
+    }
+}
+@-moz-document url(moz-extension://3c9765b9-578d-4087-b815-6214eb63bd33/sidebar/sidebar.html) {
+    #pinned-tabs {
+        display: none;
+    }
+    .container-tab-close {
+        display: none;
+    }
+    .container-header .container-icon {
+        width:24px;
+        height:24px;
+        padding: 5px 5px 5px 2px;
+        filter: grayscale(1) invert(1);
+    }
+    .container-title {
+        white-space: nowrap;
+    }
+}
